@@ -40,8 +40,9 @@ h2 {
     margin-bottom: 20px;
 }
 
-.profile-section img {
+.profile-section img {    
     width: 500px;
+    max-width: 80%;
     object-fit: cover;
 }
 
@@ -117,13 +118,19 @@ h2 {
 }
 
 .gig-card {
-    background-color: #333;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: left;
-    min-width: calc(40% - 20px);
-    flex: 0 0 auto;
-    scroll-snap-align: start;
+  background-color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  min-width: calc(40% - 20px);
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+  .gig-card {
+    min-width: calc(80% - 20px);
+  }
 }
 
 .gig-card img {
