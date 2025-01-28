@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', serif;
+    font-weight: 300;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: #131313;
+    color: #FDF5C0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    background-color: #000000;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 100px 0;
+    text-align: center;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 500px;
+    object-fit: cover;
+}
+
+.profile-section h1 {
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+    color: #E8DAA3;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 0 0 0;
+}
+
+.social-icons i {
+    font-size: 2.5rem;
+    color: #FDF5C0;
+    transition: all 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #ff7b00;
+}
+
+/* Divider */
+.divider {
+    background-color: #FDF5C0;
+    height: 2px;
+    margin: 20px 0;
+}
+
+/* Banner */
+.banner {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0%;
+    border-radius: 12px;
+    transition: height 0.3s ease;
+}
+
+.banner img:hover {
+    height: 320px;
+}
+
+.banner h2 {
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+}
+
+/* Gigs Carousel */
+.gigs-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+.gigs-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.gig-card {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    min-width: calc(40% - 20px);
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.gig-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.gig-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.gig-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FDF5C0;
+    background-color: #ff7b00;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.gig-card a:hover {
+    background-color: #da6900;
+}
+
+/* Video Section */
+.video-section {
+    margin-bottom: 20px;
+}
+.video-section video {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Drivers Carousel */
+.driver-carousel {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.driver-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.driver-card {
+  background-color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+}
+
+.driver-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.driver-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.driver-card a {
+  display: inline-block;
+  text-decoration: none;
+  color: #FDF5C0;
+  background-color: #ff7b00;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.driver-card a:hover {
+  background-color: #da6900;
+}
+
+/* Links Section */
+.links-section a {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #ff7b00;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.links-section a:hover {
+    background-color: #da6900;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #FDF5C0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer .footer-content {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer .footer-content p {
+    margin: 0;
+}
+
+.footer .footer-content i {
+    color: #ff7b00;
+}
+
+.footer .footer-content a {
+    color: #ff7b00;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer .footer-content a:hover {
+    color: #da6900;
+}
