@@ -11,7 +11,7 @@ body {
     font-weight: 300;
     font-optical-sizing: auto;
     font-style: normal;
-    background: #080808;
+    background: linear-gradient(135deg, #080808 0%, #0a0f0d 100%);
     color: #ECBA82;
     display: flex;
     flex-direction: column;
@@ -47,6 +47,8 @@ h3 {
 }
 
 .section-title {
+    color: #eee;
+    padding-top: 20px;
     margin: 10px 0;
 }
 
@@ -115,7 +117,7 @@ social-icons i:hover {
 /* Carousel */
 .carousel-wrapper {
   width: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-bottom: 2px solid #FBAF29;
   position: relative;
 }
@@ -229,7 +231,8 @@ social-icons i:hover {
 
 /* Video Section */
 .video-section {
-    margin: 20px 0 10px 0;
+    padding: 20px 0 10px 0;
+    border-bottom: 2px solid #FBAF29;
 }
 .video-section video {
     width: 100%;
