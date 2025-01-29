@@ -164,13 +164,6 @@ h3 {
     scroll-behavior: smooth;
 }
 
-.carousel :where(.gig-card, img) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    scroll-snap-align: start;
-}
-
 .carousel.dragging {
     scroll-snap-type: none;
     cursor: grabbing;
