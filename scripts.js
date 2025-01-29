@@ -1,5 +1,6 @@
 // Dragging carousel
 const carousel = document.querySelector('.carousel');
+const rentalsCarousel = document.querySelector('.rentals-carousel');
 
 let isDragging = false;
 let startX;
@@ -33,8 +34,38 @@ carousel.addEventListener('mouseleave', dragEnd);
 carousel.addEventListener('mouseup', dragEnd);
 carousel.addEventListener('touchend', dragEnd);
 carousel.addEventListener('mousemove', dragging);
-carousel.addEventListener('touchmove', dragging);
-// End of dragging carousel
+carousel.addEventListener('touchmove', dragging, { passive: false });
+
+// Dragging rentals carousel
+const dragStartRentals = (e) => {
+    isDragging = true;
+    startX = e.pageX || e.touches[0].pageX - rentalsCarousel.offsetLeft;
+    scrollLeft = rentalsCarousel.scrollLeft;
+    rentalsCarousel.style.cursor = 'grabbing';
+    rentalsCarousel.classList.add('dragging');
+}
+
+const dragEndRentals = () => {
+    isDragging = false;
+    rentalsCarousel.style.cursor = 'grab';
+    rentalsCarousel.classList.remove('dragging');
+}
+
+const draggingRentals = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX || e.touches[0].pageX - rentalsCarousel.offsetLeft;
+    const walk = (x - startX) * 1.3; //scroll-fast
+    rentalsCarousel.scrollLeft = scrollLeft - walk;
+}
+
+rentalsCarousel.addEventListener('mousedown', dragStartRentals);
+rentalsCarousel.addEventListener('touchstart', dragStartRentals);
+rentalsCarousel.addEventListener('mouseleave', dragEndRentals);
+rentalsCarousel.addEventListener('mouseup', dragEndRentals);
+rentalsCarousel.addEventListener('touchend', dragEndRentals);
+rentalsCarousel.addEventListener('mousemove', draggingRentals);
+rentalsCarousel.addEventListener('touchmove', draggingRentals, { passive: false });
 
 // Carousel arrow buttons
 const arrowBtns = document.querySelectorAll('.carousel-wrapper i');
@@ -42,6 +73,8 @@ const firstCardWidth = carousel.querySelector('.carousel-card').offsetWidth;
 
 arrowBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        carousel.scrollLeft += btn.id === 'left' ? -firstCardWidth * 2 : firstCardWidth * 2;
+        const isRentals = btn.parentElement.querySelector('.rentals-carousel');
+        const targetCarousel = isRentals ? rentalsCarousel : carousel;
+        targetCarousel.scrollLeft += btn.id.includes('left') ? -firstCardWidth * 2 : firstCardWidth * 2;
     });
 });
