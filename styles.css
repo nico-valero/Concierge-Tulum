@@ -46,6 +46,10 @@ h3 {
     text-align: center;
 }
 
+.section-title {
+    margin: 10px 0;
+}
+
 .profile-section {
     padding-bottom: 20px;
     border-bottom: 2px solid #FBAF29;
@@ -213,6 +217,8 @@ social-icons i:hover {
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  user-select: none;
+  align-self: flex-start;
 }
 
 .small-button:hover {
@@ -223,7 +229,7 @@ social-icons i:hover {
 
 /* Video Section */
 .video-section {
-    margin: 20px 0 20px 0;
+    margin: 20px 0 10px 0;
 }
 .video-section video {
     width: 100%;
@@ -273,7 +279,7 @@ social-icons i:hover {
 /* Footer */
 .footer {
     background: #183937;
-    color: #fff;
+    color: #eee;
     padding: 20px 0;
     text-align: center;
     border-top: 2px solid #ECBA82;
@@ -293,18 +299,18 @@ social-icons i:hover {
     margin: 0;
 }
 
-.footer .footer-content i {
-    color: #ff7b00;
+.footer .footer-content .footer-accent {
+    color: #ECBA82;
 }
 
 .footer .footer-content a {
-    color: #ff7b00;
+    color: #ECBA82;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .footer .footer-content a:hover {
-    color: #da6900;
+    color: #ff7b00;
 }
 
 @media (max-width: 768px) {
@@ -318,11 +324,15 @@ social-icons i:hover {
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .social-icons i {
+    font-size: 1.5rem;
   }
 
   .container {
