@@ -92,14 +92,13 @@ h3 {
 
 .banner iframe {
     width: 100%;
-    height: 500px;
+    height: auto;
     object-fit: cover;
     object-position: 0%;
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 .banner iframe:hover {
-    height: 550px;
     filter: brightness(0.8);
     transition: all 0.3s ease;
 }
