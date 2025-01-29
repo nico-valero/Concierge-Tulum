@@ -186,6 +186,7 @@ social-icons i:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .carousel-card img,
@@ -252,6 +253,7 @@ social-icons i:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .driver-card img {
@@ -342,7 +344,7 @@ social-icons i:hover {
 
   .carousel,
   .rentals-carousel {
-    grid-auto-columns: calc((100% / 2.2) - 20px);
+    grid-auto-columns: calc((100% / 1.5) - 20px);
   }
 
   .carousel-card,
@@ -353,6 +355,10 @@ social-icons i:hover {
   .carousel-card img,
   .rentals-carousel-card img {
     height: 200px;
+  }
+
+  .driver-card {
+    padding: 10px;
   }
 
   .banner iframe {
