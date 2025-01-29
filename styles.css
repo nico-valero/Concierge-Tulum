@@ -178,7 +178,6 @@ h3 {
   padding: 20px;
   text-align: left;
   flex: 0 0 auto;
-  scroll-snap-align: start;
   cursor: pointer;
   scroll-snap-align: start;
 }
@@ -221,11 +220,10 @@ h3 {
     border-radius: 12px;
 }
 
-/* Drivers Carousel */
-.driver-carousel {
+/* Drivers */
+.driver {
   display: flex;
   gap: 20px;
-  padding-bottom: 20px;
 }
 
 .driver-container {
@@ -251,20 +249,7 @@ h3 {
 }
 
 .driver-card h3 {
-  font-size: 1.2rem;
   margin-bottom: 10px;
-}
-
-.driver-card a {
-  display: inline-block;
-  text-decoration: none;
-  color: #ECBA82;
-  background-color:  #183937;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
 }
 
 .driver-card a:hover {
