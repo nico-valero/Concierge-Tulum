@@ -213,7 +213,7 @@ h3 {
 
 /* Video Section */
 .video-section {
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
 }
 .video-section video {
     width: 100%;
@@ -336,11 +336,7 @@ h3 {
     padding: 10px;
   }
 
-  .banner img {
-    height: auto;
-  }
-
-  .banner img:hover {
+  .banner iframe {
     height: auto;
   }
 
