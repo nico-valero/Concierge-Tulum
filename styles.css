@@ -364,6 +364,10 @@ h3 {
     height: auto;
   }
 
+  .banner img:hover {
+    height: auto;
+  }
+
   .small-button {
     padding: 6px 10px;
     font-size: 0.7rem;
