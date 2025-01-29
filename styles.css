@@ -42,7 +42,7 @@ h3 {
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 100px 0;
+    margin: 100px 0 0 0;
     text-align: center;
 }
 
@@ -79,12 +79,13 @@ h3 {
 }
 
 .social-icons i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #FBAF29;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-social-icons i:hover {
+.social-icons i:hover {
     color: #ff7b00;
 }
 
@@ -277,6 +278,43 @@ social-icons i:hover {
 
 .driver-card a:hover {
   background-color: #0d1f1a;
+}
+
+/* Contact */
+.contact-section {
+  max-width: 90%;
+  padding: 20px 0 50px 0;
+  text-align: center;
+}
+
+.contact-section .section-title {
+  color: #ECBA82;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  color: #eee;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  color: #ECBA82;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  font-size: 1.5rem;
+  color: #FBAF29;
 }
 
 /* Footer */
