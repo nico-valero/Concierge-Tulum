@@ -92,7 +92,7 @@ h3 {
 
 .banner iframe {
     width: 100%;
-    height: auto;
+    height: fit-content;
     object-fit: cover;
     object-position: 0%;
     border-radius: 12px;
