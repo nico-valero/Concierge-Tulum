@@ -249,7 +249,6 @@ a {
     gap: 20px;
     border-radius: 12px;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
     scrollbar-width: none;
     scroll-behavior: smooth;
     padding-bottom: 10px;
