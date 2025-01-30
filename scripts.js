@@ -93,3 +93,14 @@ navbarLinks.forEach(link => {
         });
     });
 });
+
+// Navbar toggle for mobile
+const navbarToggle = document.querySelector('.navbar-toggle');
+const navbarMenu = document.querySelector('.navbar-menu');
+const navbarIcon = navbarToggle.querySelector('i');
+
+navbarToggle.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+    navbarIcon.classList.toggle('ri-menu-line');
+    navbarIcon.classList.toggle('ri-close-line');
+});
