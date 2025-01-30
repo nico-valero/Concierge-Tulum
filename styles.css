@@ -284,7 +284,7 @@ h3 {
 .contact-section {
   max-width: 90%;
   padding: 20px 0 50px 0;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-section .section-title {
@@ -413,7 +413,7 @@ h3 {
   }
 
   .banner iframe {
-    height: auto;
+    height: 200px;
   }
 
   .small-button {
