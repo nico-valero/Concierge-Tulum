@@ -108,6 +108,7 @@ a {
   .navbar .container {
     align-items: center;
     justify-content: space-between;
+    margin: 10px 0 0 0;
   }
 
   .navbar-menu {
@@ -116,7 +117,7 @@ a {
     width: 22%;
     display: none;
     position: absolute;
-    top: 90px;
+    top: 80px;
     right: 0;
     background-color: #183937;
     padding: 20px;
