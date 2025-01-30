@@ -56,7 +56,7 @@ a {
 .section-title {
     color: #eee;
     padding-top: 20px;
-    margin: 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 .profile-section {
@@ -98,9 +98,7 @@ a {
 
 /* Banner */
 .banner {
-    margin-bottom: 20px;
     text-align: left;
-    padding-bottom: 10px;
     border-bottom: 2px solid #FBAF29;
 }
 
@@ -373,10 +371,16 @@ a {
 
   h2 {
     font-size: 1rem;
+    letter-spacing: normal;
   }
 
   h3 {
     font-size: 0.8rem;
+  }
+
+  .section-title {
+    margin: 0 0 10px 0;
+    padding: 10px 0 0 0;
   }
 
   .social-icons i {
