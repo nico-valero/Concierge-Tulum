@@ -12,7 +12,22 @@
   <script src="scripts.js" defer></script>
 </head>
 <body>
-  <div class="container" style="text-align: center;">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo"><img class="nav-logo" src="media/elysium-concierge.svg" alt=""></a>
+      <ul class="navbar-menu">
+        <li><a href="#profile-section">Home</a></li>
+        <li><a href="#event-carousel">Events</a></li>
+        <li><a href="#video-section">Videos</a></li>
+        <li><a href="#rentals-carousel">Cars</a></li>
+        <li><a href="#drivers-section">Drivers</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="profile-section" class="spacer"></div>
+  <div class="container">
     <!-- Hero Section -->
     <div class="profile-section">
       <img src="media/elysium3.svg" alt="">
@@ -30,7 +45,7 @@
       <h3>Video Title | Subtitle or description.</h3>
     </div>
     <!-- Event Carousel -->
-    <h2 class="section-title">Experience Tulum – Event Highlights</h2>
+    <h2 id="event-carousel" class="section-title">Experience Tulum – Event Highlights</h2>
     <div class="carousel-wrapper">
       <i id="left" class="ri-arrow-drop-left-line"></i>
       <ul class="carousel">
@@ -63,14 +78,14 @@
       <i id="right" class="ri-arrow-drop-right-line"></i>
     </div>
     <!-- Video Section -->
-    <div class="video-section">
+    <div id="video-section" class="video-section">
       <video controls="false">
         <source src="media/beer.mp4" type="video/mp4" autoplay loop muted>
         Your browser does not support the video tag.
       </video>
     </div>
     <!-- Car Rental Carousel -->
-    <h2 class="section-title">Drive Your Adventure - Rent a Car</h2>
+    <h2 id="rentals-carousel" class="section-title">Drive Your Adventure - Rent a Car</h2>
     <div class="carousel-wrapper">
       <i id="left2" class="ri-arrow-drop-left-line"></i>
       <ul class="rentals-carousel">
@@ -104,7 +119,7 @@
     </div>
     <!-- Contact Section -->
     <!-- Drivers Section -->
-    <h2 class="section-title">Tailored Transfers – Your Driver Awaits</h2>
+    <h2 id="drivers-section" class="section-title">Tailored Transfers – Your Driver Awaits</h2>
     <div class="driver">
       <div class="driver-container">
         <div class="driver-card">
@@ -121,7 +136,7 @@
     </div>
   </div>
   <!-- Contact Section -->
-  <div class="contact-section">
+  <div id="contact-section" class="contact-section">
     <h2 class="section-title">Get in Touch</h2>
     <p>If you have any questions or need further information, feel free to reach out to us:</p>
     <ul class="contact-info">

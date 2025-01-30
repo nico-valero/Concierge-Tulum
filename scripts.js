@@ -78,3 +78,18 @@ arrowBtns.forEach(btn => {
         targetCarousel.scrollLeft += btn.id.includes('left') ? -firstCardWidth * 2 : firstCardWidth * 2;
     });
 });
+
+// Smooth scrolling for navbar links
+const navbarLinks = document.querySelectorAll('.navbar-menu a');
+
+navbarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        window.scrollTo({
+            top: targetElement.offsetTop - 100, // Adjust the offset for fixed navbar
+            behavior: 'smooth'
+        });
+    });
+});
