@@ -506,6 +506,7 @@ a {
 .contact-info i {
   font-size: 1.5rem;
   color: #FBAF29;
+  align-self: flex-start;
 }
 
 /* Footer */
