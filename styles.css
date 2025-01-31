@@ -63,6 +63,7 @@ a {
 }
 
 .navbar-logo {
+  margin-top: 10px;
   color: #ECBA82;
   font-size: 1.5rem;
   font-weight: 700;
@@ -574,8 +575,9 @@ a {
     margin-top: 20px;
   }
 
-  .profile-section svg {
+  .profile-section img {
     width: 100%;
+    margin: 0;
   }
 
   .carousel-wrapper {
