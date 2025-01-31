@@ -347,17 +347,14 @@ a {
 .restaurants-carousel-card h3 {
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
 }
 
 .rentals-carousel-card h3 {
     margin-bottom: 0;
 }
 
-.rentals-carousel-card p {
-    margin-top: 2px;
+.card-content p {
+    margin-bottom: 0.4rem;
     font-size: 1.1rem;
     font-weight: 400;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -434,9 +431,6 @@ a {
 .service h3 {
     padding-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
 }
 
 /* Drivers */
@@ -473,11 +467,7 @@ a {
 }
 
 .driver-card h3 {
-    margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
 }
 
 .driver-card a:hover {
@@ -608,9 +598,9 @@ a {
         font-size: 0.8rem;
     }
 
-    .rentals-carousel-card p {
-        margin-top: 4px;
+    .card-content p {
         font-size: 0.8rem;
+        margin-bottom: 0;
     }
 
     .section-title {
