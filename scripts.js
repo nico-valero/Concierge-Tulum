@@ -1,71 +1,47 @@
 // Dragging carousel
 const carousel = document.querySelector('.carousel');
 const rentalsCarousel = document.querySelector('.rentals-carousel');
+const restaurantsCarousel = document.querySelector('.restaurants-carousel');
 
 let isDragging = false;
 let startX;
 let scrollLeft;
 
-const dragStart = (e) => {
+const dragStart = (e, targetCarousel) => {
     isDragging = true;
-    startX = e.pageX || e.touches[0].pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-    carousel.style.cursor = 'grabbing';
-    carousel.classList.add('dragging');
+    startX = e.pageX || e.touches[0].pageX - targetCarousel.offsetLeft;
+    scrollLeft = targetCarousel.scrollLeft;
+    targetCarousel.style.cursor = 'grabbing';
+    targetCarousel.classList.add('dragging');
 }
 
-const dragEnd = () => {
+const dragEnd = (targetCarousel) => {
     isDragging = false;
-    carousel.style.cursor = 'grab';
-    carousel.classList.remove('dragging');
+    targetCarousel.style.cursor = 'grab';
+    targetCarousel.classList.remove('dragging');
 }
 
-const dragging = (e) => {
+const dragging = (e, targetCarousel) => {
     if (!isDragging) return;
     e.preventDefault();
-    const x = e.pageX || e.touches[0].pageX - carousel.offsetLeft;
+    const x = e.pageX || e.touches[0].pageX - targetCarousel.offsetLeft;
     const walk = (x - startX) * 1.3; //scroll-fast
-    carousel.scrollLeft = scrollLeft - walk;
+    targetCarousel.scrollLeft = scrollLeft - walk;
 }
 
-carousel.addEventListener('mousedown', dragStart);
-carousel.addEventListener('touchstart', dragStart);
-carousel.addEventListener('mouseleave', dragEnd);
-carousel.addEventListener('mouseup', dragEnd);
-carousel.addEventListener('touchend', dragEnd);
-carousel.addEventListener('mousemove', dragging);
-carousel.addEventListener('touchmove', dragging, { passive: false });
-
-// Dragging rentals carousel
-const dragStartRentals = (e) => {
-    isDragging = true;
-    startX = e.pageX || e.touches[0].pageX - rentalsCarousel.offsetLeft;
-    scrollLeft = rentalsCarousel.scrollLeft;
-    rentalsCarousel.style.cursor = 'grabbing';
-    rentalsCarousel.classList.add('dragging');
+const addDragEvents = (targetCarousel) => {
+    targetCarousel.addEventListener('mousedown', (e) => dragStart(e, targetCarousel));
+    targetCarousel.addEventListener('touchstart', (e) => dragStart(e, targetCarousel));
+    targetCarousel.addEventListener('mouseleave', () => dragEnd(targetCarousel));
+    targetCarousel.addEventListener('mouseup', () => dragEnd(targetCarousel));
+    targetCarousel.addEventListener('touchend', () => dragEnd(targetCarousel));
+    targetCarousel.addEventListener('mousemove', (e) => dragging(e, targetCarousel));
+    targetCarousel.addEventListener('touchmove', (e) => dragging(e, targetCarousel), { passive: false });
 }
 
-const dragEndRentals = () => {
-    isDragging = false;
-    rentalsCarousel.style.cursor = 'grab';
-    rentalsCarousel.classList.remove('dragging');
-}
-
-const draggingRentals = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX || e.touches[0].pageX - rentalsCarousel.offsetLeft;
-    const walk = (x - startX) * 1.3; //scroll-fast
-    rentalsCarousel.scrollLeft = scrollLeft - walk;
-}
-
-rentalsCarousel.addEventListener('mousedown', dragStartRentals);
-rentalsCarousel.addEventListener('touchstart', dragStartRentals);
-rentalsCarousel.addEventListener('mouseleave', dragEndRentals);
-rentalsCarousel.addEventListener('mouseup', dragEndRentals);
-rentalsCarousel.addEventListener('touchend', dragEndRentals);
-rentalsCarousel.addEventListener('mousemove', draggingRentals);
-rentalsCarousel.addEventListener('touchmove', draggingRentals, { passive: false });
+addDragEvents(carousel);
+addDragEvents(rentalsCarousel);
+addDragEvents(restaurantsCarousel);
 
 // Carousel arrow buttons
 const arrowBtns = document.querySelectorAll('.carousel-wrapper i');
@@ -74,7 +50,8 @@ const firstCardWidth = carousel.querySelector('.carousel-card').offsetWidth;
 arrowBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const isRentals = btn.parentElement.querySelector('.rentals-carousel');
-        const targetCarousel = isRentals ? rentalsCarousel : carousel;
+        const isRestaurants = btn.parentElement.querySelector('.restaurants-carousel');
+        const targetCarousel = isRentals ? rentalsCarousel : (isRestaurants ? restaurantsCarousel : carousel);
         targetCarousel.scrollLeft += btn.id.includes('left') ? -firstCardWidth * 2 : firstCardWidth * 2;
     });
 });
