@@ -502,6 +502,7 @@ a {
 
 .social-icons-column {
   flex: 0 0 20%;
+  padding-bottom: 10px;
 }
 
 .contact-info {
