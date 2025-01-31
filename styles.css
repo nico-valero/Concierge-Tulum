@@ -470,9 +470,12 @@ a {
 
 /* Contact */
 .contact-section {
-  max-width: 90%;
+  width: 100%;
   padding: 20px 0 50px 0;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contact-section .section-title {
