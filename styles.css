@@ -478,9 +478,6 @@ a {
   width: 100%;
   padding: 0 0 50px 0;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .contact-section .section-title {
@@ -499,9 +496,12 @@ a {
   width: 100%;
 }
 
-.contact-info-column,
-.social-icons-column {
+.contact-info-column {
   flex: 1;
+}
+
+.social-icons-column {
+  flex: 0 0 20%;
 }
 
 .contact-info {
@@ -672,5 +672,15 @@ a {
 
   .service img {
     height: 150px;
+  }
+
+  .contact-columns {
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .social-icons-column {
+    align-items: flex-start;
+    padding-top: 20px;
   }
 }
