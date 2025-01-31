@@ -176,16 +176,7 @@ a {
 
 .section-title {
     color: #eee;
-    padding-top: 20px;
-    margin: 10px 0 10px 0;
-}
-
-
-
-.section-title .uncontained {
-  color: #ECBA82;
-  padding-top: 20px;
-  margin: 10px 0 10px 0;
+    margin: 20px 0 0 0;
 }
 
 .profile-section {
@@ -251,6 +242,11 @@ a {
 }
 
 /* Carousel */
+
+.carousel-container .section-title {
+  margin: 20px 0 10px 0;
+}
+
 .carousel-wrapper {
   width: 100%;
   padding-bottom: 20px;
@@ -316,19 +312,27 @@ a {
 
 .carousel-card,
 .rentals-carousel-card {
-  list-style: none;
+    list-style: none;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    flex: 0 0 auto;
+    cursor: pointer;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.carousel-card {
+  background-color: #183937;
+  color: #ECBA82;
+}
+
+.rentals-carousel-card {
   background-color: #ECBA82;
   color: #183937;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: left;
-  flex: 0 0 auto;
-  cursor: pointer;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
 }
 
 .carousel-card img,
@@ -380,23 +384,23 @@ a {
 
 /* Video Section */
 .video-section {
-    padding: 20px 0 10px 0;
-    border-bottom: 2px solid #FBAF29;
+    padding: 20px 0 0 0;
 }
 .video-section video {
     width: 100%;
     border-radius: 12px;
 }
 
-/* Yachts Section */
-.yachts {
+/* Services Sections */
+.services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 10px 0;
+  padding: 10px 0 20px 0;
+  border-bottom: 2px solid #FBAF29;
 }
 
-.yacht {
+.service {
   background-color: #183937;
   color: #ECBA82;
   border-radius: 12px;
@@ -408,7 +412,7 @@ a {
   gap: 10px;
 }
 
-.yacht img {
+.service img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -416,7 +420,7 @@ a {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.yacht h3 {
+.service h3 {
   padding-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-decoration: underline;
@@ -426,6 +430,7 @@ a {
 
 /* Drivers */
 .driver {
+  padding: 10px 0 0 0;
   display: flex;
   gap: 20px;
 }
@@ -471,7 +476,7 @@ a {
 /* Contact */
 .contact-section {
   width: 100%;
-  padding: 20px 0 50px 0;
+  padding: 0 0 50px 0;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -630,15 +635,15 @@ a {
     height: 80px;
   }
 
-  .yachts {
+  .services {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .yacht {
+  .service {
     padding: 10px;
   }
 
-  .yacht img {
+  .service img {
     height: 150px;
   }
 }
