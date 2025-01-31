@@ -493,6 +493,17 @@ a {
   margin-bottom: 20px;
 }
 
+.contact-columns {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-info-column,
+.social-icons-column {
+  flex: 1;
+}
+
 .contact-info {
   list-style: none;
   padding: 0;
@@ -512,6 +523,22 @@ a {
   font-size: 1.5rem;
   color: #FBAF29;
   align-self: flex-start;
+}
+
+.social-icons-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.social-icons-column .social-icons {
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons-column .social-icons i {
+  font-size: 2rem;
 }
 
 /* Footer */
