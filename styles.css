@@ -382,12 +382,7 @@ a {
 .carousel-card h3,
 .rentals-carousel-card h3,
 .restaurants-carousel-card h3 {
-    margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.rentals-carousel-card h3 {
-    margin-bottom: 0;
 }
 
 .card-content p {
