@@ -322,14 +322,18 @@ a {
 }
 
 /* Carousel */
+.carousel-container {
+    border-top: 2px solid var(--accent-color);
+}
+
 .carousel-container .section-title {
     margin: 20px 0 10px 0;
 }
 
 .carousel-wrapper {
     width: 100%;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--accent-color);
+    /* padding-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color); */
     position: relative;
 }
 
@@ -380,6 +384,10 @@ a {
     scrollbar-width: none;
     scroll-behavior: smooth;
     padding-bottom: 10px;
+}
+
+.restaurants-carousel {
+    padding-bottom: 20px;
 }
 
 .carousel.dragging,
@@ -472,7 +480,8 @@ a {
 
 /* Video Section */
 .video-section {
-    padding: 20px 0 0 0;
+    padding: 20px 0 20px 0;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .video-section video {
