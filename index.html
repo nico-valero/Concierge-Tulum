@@ -19,40 +19,62 @@
       <a href="index.html" class="navbar-logo"><img class="nav-logo" src="media/elysium-concierge.svg" alt=""></a>
       <div class="navbar-toggle"><i class="ri-menu-line"></i></div>
       <ul class="navbar-menu">
-        <li><a href="#profile-section">Home</a></li>
+        <li><a href="#hero-section">Home</a></li>
+        <li><a href="#">About Us</a></li>
         <li><a href="https://vloid.com" target="_blank">Real State</a></li>
-        <li><a href="#yacht-section">Yachts</a></li>
-        <li><a href="#restaurants-carousel">Restaurants</a></li>
-        <li><a href="#event-carousel">Events</a></li>
-        <li><a href="#drivers-section">SUV</a></li>
-        <li><a href="#rentals-section">Cars</a></li>
-        <li><a href="#tours-carousel">Tours</a></li>
+        <li><a>Services</a>
+          <div class="navbar-sub-menu sub-menu-container">
+            <ul>
+              <li><a href="#yacht-section">Yachts</a></li>
+              <li><a href="#restaurants-carousel">Restaurants</a></li>
+              <li><a href="#event-carousel">Events</a></li>
+              <li><a href="#rentals-carousel">SUV</a></li>
+              <li><a href="#rentals-section">Cars</a></li>
+              <li><a href="#tours-carousel">Tours</a></li>
+              <li><a href="#transfers-section">Transfers</a></li>
+            </ul>
+          </div>
+        </li>
         <li><a href="#contact-section">Contact</a></li>
       </ul>
     </div>
   </nav>
-  <div id="profile-section" class="spacer">
-  </div>
-  <div class="no-container">
+  <!-- <div id="profile-section" class="spacer">
+  </div>  -->
     <!-- Hero Section -->
-    <div class="container">
+     <div class="new-hero" id="hero-section">
+      <div class="hero-content">
+        <img src="media/logos/elysium-iso-01.png" alt="">
+        <h1 class="hero-title">Welcome to Elysium</h1>
+        <p class="hero-text">The Fast Lane to Memorable Journeys</p>
+        <a class="small-button" href="#contact-section">Contact Us</a>
+      </div>
+     </div>
+  <div class="no-container">
+    <!-- <div class="container">
       <div class="profile-section">
-        <img src="media/elysium3.svg" alt="">
+        <img src="media/logos/elysium-logo.jpg" alt="">
         <h1>The Fast Lane to Memorable Journeys.</h1>
-        <!-- Social Icons -->
         <ul class="social-icons">
           <li><a href="https://wa.me/" target="_blank"><i class="ri-whatsapp-line"></i></a></li>
           <li><a href="https://www.facebook.com/" target="_blank"><i class="ri-facebook-fill"></i></a></li>
           <li><a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-line"></i></a></li>
         </ul>
       </div>
-    </div>
-    <!-- Video Banner -->
-      <div id="video-section" class="video-section">
-        <video poster="media/video_poster.png" controls autoplay muted>
-          <source src="media/Mexico_Travel_Film.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+    </div> -->
+    <!-- About US -->
+      <div class="about-us-section border-bottom" id="about-us-section">
+        <div class="video">
+          <video poster="media/video_poster.png" controls autoplay muted loop>
+            <source src="media/Mexico_Travel_Film.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div> <!--
+        <div class="about-us-content">
+          <h2 class="section-title">About Us</h2>
+          <p>At Elysium, we are dedicated to providing you with the ultimate luxury experience. Our team of experts is here to ensure that your stay in Tulum is nothing short of extraordinary. From luxury yachts to exclusive events, we have everything you need to make your vacation unforgettable.</p>
+          <a class="small-button" href="https://vloid.com" target="_blank">Learn More</a>
+        </div> -->
       </div>
     <!-- Yachts Section -->
     <div>
@@ -336,7 +358,7 @@
         <i id="right" class="ri-arrow-drop-right-line"></i>
       </div>
     </div>
-    <div id="video-section2" class="video-section">
+    <div id="video-section" class="video border-bottom">
       <video poster="media/festivals/video/poster_2.png" controls>
         <source src="media/festivals/video/Zamna_Tulum_2025_Aftermovie_(1080p).mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -489,7 +511,7 @@
       </div>
     </div>
     <!-- Drivers Section -->
-    <div id="drivers-section">
+    <div id="transfers-section">
       <h2 class="section-title">Tailored Transfers – Your Driver Awaits</h2>
       <div class="driver">
         <div class="driver-container">
