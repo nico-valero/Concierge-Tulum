@@ -775,6 +775,47 @@ a {
     color: var(--hover-color);
 }
 
+/* Whatsapp Floating Button */
+
+.float-button {
+    position: fixed;
+    transform: translate(108px, 0px);
+    bottom: 4%;
+    right: 0;
+    width: 160px;
+    padding: 5px 0;
+    padding-left: 4px;
+    overflow: hidden;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 40px 0 0 40px;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    vertical-align: middle;
+  }
+  
+  .float-button:hover {
+    transform: translate(0px, 0px);
+  }
+  
+  .float-button span {
+    color: white;
+    font-size: 13px;
+    position: absolute;
+    line-height: 16px;
+    font-weight: bolder;
+  }
+  
+  .float-button i {
+    font-size: 30px;
+    color: white;
+    line-height: 30px;
+    padding: 10px;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+  }
+
 @media (max-width: 768px) {
     body {
         margin: 0;
