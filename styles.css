@@ -254,26 +254,6 @@ a {
     color: var(--hover-color);
 }
 
-/* Banner */
-.banner {
-    text-align: left;
-    padding: 20px 0 10px 0;
-    border-bottom: 2px solid var(--accent-color);
-    margin-bottom: 10px;
-}
-
-.banner iframe {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.banner iframe:hover {
-    filter: brightness(0.8);
-}
-
 /* Swiper */
 
 .swiper {
@@ -323,7 +303,13 @@ a {
 
 /* Carousel */
 .carousel-container {
-    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 20px;
+}
+
+.no-border-no-padding-bottom {
+    border-bottom: 0;
+    padding-bottom: 0;
 }
 
 .carousel-container .section-title {
@@ -374,7 +360,8 @@ a {
 
 .carousel,
 .rentals-carousel,
-.restaurants-carousel {
+.restaurants-carousel,
+.tours-carousel {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 2.5) - 20px);
@@ -392,7 +379,8 @@ a {
 
 .carousel.dragging,
 .rentals-carousel.dragging,
-.restaurants-carousel.dragging {
+.restaurants-carousel.dragging,
+.tours-carousel.dragging {
     scroll-snap-type: none;
     cursor: grabbing;
     scroll-behavior: auto;
@@ -401,7 +389,8 @@ a {
 
 .carousel-card,
 .rentals-carousel-card,
-.restaurants-carousel-card {
+.restaurants-carousel-card,
+.tours-carousel-card {
     list-style: none;
     border-radius: 12px;
     padding: 20px;
@@ -421,14 +410,16 @@ a {
 }
 
 .rentals-carousel-card,
-.restaurants-carousel-card {
+.restaurants-carousel-card,
+.tours-carousel-card {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
 .carousel-card img,
 .rentals-carousel-card img,
-.restaurants-carousel-card img {
+.restaurants-carousel-card img,
+.tours-carousel-card img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -438,7 +429,8 @@ a {
 
 .carousel-card h3,
 .rentals-carousel-card h3,
-.restaurants-carousel-card h3 {
+.restaurants-carousel-card h3,
+.tours-carousel-card h3 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -728,28 +720,27 @@ a {
 
     .carousel,
     .rentals-carousel,
-    .restaurants-carousel {
+    .restaurants-carousel,
+    .tours-carousel {
         grid-auto-columns: calc((100% / 1.5) - 20px);
     }
 
     .carousel-card,
     .rentals-carousel-card,
-    .restaurants-carousel-card {
+    .restaurants-carousel-card,
+    .tours-carousel-card {
         padding: 10px;
     }
 
     .carousel-card img,
     .rentals-carousel-card img,
-    .restaurants-carousel-card img {
+    .restaurants-carousel-card img,
+    .tours-carousel-card img {
         height: 200px;
     }
 
     .driver-card {
         padding: 10px;
-    }
-
-    .banner iframe {
-        height: 200px;
     }
 
     .small-button {

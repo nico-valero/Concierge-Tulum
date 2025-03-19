@@ -1,6 +1,7 @@
 // Dragging carousel
 const carousel = document.querySelector('.carousel');
 const rentalsCarousel = document.querySelector('.rentals-carousel');
+const toursCarousel = document.querySelector('.tours-carousel');
 const restaurantsCarousel = document.querySelector('.restaurants-carousel');
 
 let isDragging = false;
@@ -42,6 +43,7 @@ const addDragEvents = (targetCarousel) => {
 addDragEvents(carousel);
 addDragEvents(rentalsCarousel);
 addDragEvents(restaurantsCarousel);
+addDragEvents(toursCarousel);
 
 // Carousel arrow buttons
 const arrowBtns = document.querySelectorAll('.carousel-wrapper i');
@@ -51,7 +53,8 @@ arrowBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const isRentals = btn.parentElement.querySelector('.rentals-carousel');
         const isRestaurants = btn.parentElement.querySelector('.restaurants-carousel');
-        const targetCarousel = isRentals ? rentalsCarousel : (isRestaurants ? restaurantsCarousel : carousel);
+        const isTours = btn.parentElement.querySelector('.tours-carousel');
+        const targetCarousel = isRentals ? rentalsCarousel : (isRestaurants ? restaurantsCarousel : (isTours ? toursCarousel : carousel));
         targetCarousel.scrollLeft += btn.id.includes('left') ? -firstCardWidth * 2 : firstCardWidth * 2;
     });
 });
