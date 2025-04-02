@@ -23,6 +23,7 @@
     --hover-color: #ff7b00;
     --contact-color: #0d1f1a;
     --font-family: 'Space Grotesk', serif;
+    --text-family: 'Inter', sans-serif;
 }
 
 /* Body */
@@ -39,6 +40,18 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    font-family: var(--font-family);
+}
+
+p, li, details, figcaption {
+    font-family: var(--text-family);
+    line-height: 1.5;
+    text-wrap: pretty;
+    max-width: 65ch;
 }
 
 /* Headings */
@@ -220,13 +233,12 @@ a {
     width: 100%;
     height: 100vh;
     padding: 40px;
-    margin-bottom: -200px;
     display: flex;
     justify-content: left;
     align-items: center;
-    background-image: url(media/cancun.png);
+    background-image: url(media/bg_cancun4.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
@@ -276,7 +288,6 @@ a {
 @media (max-width: 768px) {
     .new-hero {
         padding: 20px;
-        margin-bottom: -100px;
     }
 
     .hero-content {
@@ -297,9 +308,59 @@ a {
         font-size: 1rem;
     }
 }
-/* Other Styles */
-.spacer {
-    height: 120px;
+/* About Us */
+
+.about-us-section {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about-us-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.about-us-content h2 {
+    margin-top: 0px;
+}
+
+.about-us-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.about-video {
+    padding: 20px 0;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    .about-us-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-us-content {
+        padding-bottom: 0;
+    }
+
+    .about-us-content p {
+        font-size: 1rem;
+    }
+
+    .about-video {
+        padding-top: 0;
+        order: 2;
+    }
 }
 
 .nav-logo {
@@ -360,7 +421,7 @@ a {
 
 .social-icons i:hover {
     color: var(--hover-color);
-}
+} 
 
 /* Swiper */
 
@@ -576,16 +637,6 @@ a {
 
 .dark-button:hover {
     background-color: #0a0f0d;
-}
-
-/* Videos */
-.video {
-    padding: 20px 0 20px 0;
-}
-
-.video video {
-    width: 100%;
-    border-radius: 12px;
 }
 
 .border-bottom {
