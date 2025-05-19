@@ -17,6 +17,7 @@
     --background-gradient: linear-gradient(#fff 0%, #fff 100%);
     --primary-color: #ECBA82;
     --title-color: #101010;
+    --text-color: #333;
     --secondary-color: #183937;
     --secondary-color: #0C3A37;
     --accent-color: #FBAF29;
@@ -34,7 +35,7 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     background: var(--background-gradient);
-    color: var(--primary-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -310,9 +311,10 @@ a {
 /* About Us */
 
 .about-us-section {
+    margin: 1rem 0;
     text-align: left;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 2rem;
 }
 
@@ -362,63 +364,43 @@ video {
     }
 }
 
+.ourServices-content {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.ourServices-content p{
+    color: #ccc;
+}
+
+.ourServices-content h2{
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
 .servicesMenu {
     margin: 1rem 0 2rem 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.serviceMenu-card {
+
+.serviceMenu-card h3{
+    color: #0a0f0d;
+}
+
+.serviceMenu-card img{
     padding: 1rem;
-    display: flex;
-    flex-direction: column-reverse;
     width: 250px;
-    height: 180px;
-    border-radius: 8px;
-}
-
-.serviceMenu-card:nth-child(1){
-    background-image: url(media/yachts/catamaran/catamaran-2.jpg);
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-}
-.serviceMenu-card:nth-child(2){
-    background-image: url(media/restaurants/azulik/azulik.jpg);
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-}
-.serviceMenu-card:nth-child(3){
-    background-image: url(media/festivals/bonbonniere.jpg);
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-}
-.serviceMenu-card:nth-child(4){
-    background-image: url(media/suv1.webp);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-.serviceMenu-card:nth-child(5){
-    background-image: url(media/cars/aveo2017.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.serviceMenu-card:nth-child(6){
-    background-image: url(media/tours/chichen-itza.jpg);
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-}
-.serviceMenu-card:nth-child(7){
-    background-image: url(media/transfers/escalade_1.jpeg);
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
+    height: 250px;
+    border-radius: 1.5rem;
+    object-fit: cover;
 }
 
 .serviceMenu-card .small-button {
@@ -735,16 +717,12 @@ video {
 }
 
 /* Drivers */
-.driver {
-    padding: 10px 0 0 0;
-    display: flex;
-    gap: 20px;
-}
 
 .driver-container {
-    display: flex;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    flex-wrap: nowrap;
     width: 100%;
 }
 
@@ -763,6 +741,9 @@ video {
 
 .driver-card img {
     width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    object-position: top;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -960,10 +941,6 @@ video {
     .container {
         padding: 10px;
         margin-top: 20px;
-    }
-
-    .no-container {
-        padding: 0;
     }
 
     .profile-section img {
