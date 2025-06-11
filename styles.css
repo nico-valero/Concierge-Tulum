@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Adjusts anchor target offset */
+}
+
 /* Variables */
 :root {
     /* --background-gradient: linear-gradient(135deg, #080808 0%, #0a0f0d 100%);
@@ -342,6 +347,10 @@ video {
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+}
+
+.eventvideo {
+    padding-bottom: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -747,6 +756,10 @@ video {
 
 .border-bottom {
     border-bottom: 2px solid var(--accent-color);
+}
+
+.onerem-padding-bottom {
+    padding-bottom: 1rem;
 }
 
 /* Services Sections */
