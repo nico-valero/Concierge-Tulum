@@ -1,10 +1,7 @@
 {
   "name": "elysium",
   "compatibility_date": "2025-06-13",
-  "build": {
-    "upload": {
-      "format": "directory",
-      "dir": "."
-    }
+  "assets": {
+    "directory": "."
   }
 }
