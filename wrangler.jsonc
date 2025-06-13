@@ -1,7 +1,10 @@
 {
   "name": "elysium",
   "compatibility_date": "2025-06-13",
-  "site": {
-    "bucket": "."
+  "build": {
+    "upload": {
+      "format": "directory",
+      "dir": "."
+    }
   }
 }
