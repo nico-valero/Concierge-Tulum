@@ -85,6 +85,7 @@ navbarToggle.addEventListener('click', () => {
     navbarIcon.classList.toggle('ri-close-line');
 });
 
+// Yachts Swiper
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
