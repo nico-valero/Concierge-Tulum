@@ -692,7 +692,7 @@
             </div>
           </div>
           <div class="contact-form-container">
-              <form id="contact-form" class="contact-form">
+              <form id="contact-form" class="contact-form" method="POST" action="contact.php">
                   <div class="form-row">
                       <div class="form-group">
                           <label for="name">First Name <span class="required">*</span></label>
@@ -717,7 +717,7 @@
                       <label for="message">Message <span class="required">*</span></label>
                       <textarea id="message" name="message" required></textarea>
                   </div>
-                  <a type="submit" class="small-button dark-button">Send Message</a>
+                  <button type="submit" class="small-button dark-button">Send Message</button>
               </form>
           </div>
         </div>

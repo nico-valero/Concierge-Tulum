@@ -748,6 +748,9 @@ video {
 
 .dark-button {
     background-color: #0d1f1a;
+    border: none;
+    outline: none;
+    
 }
 
 .dark-button:hover {
